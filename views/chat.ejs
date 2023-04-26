@@ -17,6 +17,8 @@
       const chatInput = document.getElementById('chat-input');
       const messages = document.getElementById('messages');
 
+      socket.emit('from chat', 5);
+
       // Emit chat message on form submit
       chatForm.addEventListener('submit', (event) => {
         event.preventDefault();

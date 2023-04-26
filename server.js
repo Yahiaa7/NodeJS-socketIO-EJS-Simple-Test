@@ -24,6 +24,10 @@ io.on('connection', (socket) => {
         console.log(`Received message: ${msg}`);
         io.emit('chat message', msg);
     });
+    
+    socket.on('from chat', (msg) => {
+        console.log(`from chat: ${msg}`);
+    });
 
     // Listen for disconnections
     socket.on('disconnect', () => {
